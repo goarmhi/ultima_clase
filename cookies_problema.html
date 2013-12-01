@@ -1,0 +1,48 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>pixastic</title>
+
+		<style type="text/css">
+			body {
+				text-align: center;
+			}
+
+			div {
+				float: left;
+				margin-left: 30px;
+			}
+
+		</style>
+
+		<script src="javascript/jquery-1.10.2.min.js"></script>
+
+		<script>
+			function crearCookie(nombre, valor, diasDuracion) {
+				if (diasDuracion) {
+					var fecha = new Date();
+					fecha.setTime(fecha.getTime() + (diasDuracion * 24 * 60 * 60 * 1000));
+					var fechaExpira = "; expires=" + fecha.toGMTString();
+				} else
+					var fechaExpira = "";
+				document.cookie = nombre + "=" + valor + fechaExpira + "; path=/";
+			}
+			
+			crearCookie("COOKIE_PRUEBA","LALALA", 10);
+
+		</script>
+
+	</head>
+	<body>
+
+		<div>
+			<img src="imagenes/imagen1_preview.jpg"/>
+			<img src="imagenes/imagen2_preview.jpg"/>
+			<img src="imagenes/imagen3_preview.jpg"/>
+			<img src="imagenes/imagen4_preview.jpg"/>
+			<img src="imagenes/imagen5_preview.jpg"/>
+			<img src="imagenes/imagen6_preview.jpg"/>
+		</div>
+	</body>
+</html>
